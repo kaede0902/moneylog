@@ -1,4 +1,5 @@
 # moneylog
-firebase
+firebase crud app test
 
-push test
+## link
+https://moneylog-e7c4b.firebaseapp.com/

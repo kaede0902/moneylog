@@ -6,13 +6,18 @@ https://moneylog-e7c4b.firebaseapp.com/
 
 
 ## note
-htmlでは
+### html
+htmlではこれをdeferで呼んでおく
 ```
 /__/firebase/7.8.2/firebase-app.js
 /__/firebase/7.8.2/firebase-auth.js
 /__/firebase/7.8.2/firebase-firestore.js
 ```
-meessaging, storageも？
+meessaging, storageは今の所いらない
+
+### app.js
+
+残りはbodyの最後にapp.jsとしてかく．
 
 ```
     document.addEventListener('DOMContentLoaded', event => {
@@ -23,5 +28,11 @@ meessaging, storageも？
 let app = firebase.app();
 let db = firebase.firestore();
 ```
-で
+で呼んで
+
+```
+db.collection("items").get().then(function(querySnapshot) {
+querySnapshot.forEach(function(doc) {
+```
+のナカで展開する
 
